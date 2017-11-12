@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Neel Singh</title>
+  <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+  <link rel="stylesheet" type="text/css" href="../css/test.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type = "text/javascript" 
+  src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/load.js"></script>
+  <script src="js/scale.js"></script>
+  <script src="js/template.js"></script>
+  
+  <script>
+
+  </script>
+
+</head>
+<body>
+<div class="alert alert-warning" style="margin:0">
+  <strong><span class="glyphicon glyphicon-wrench"></span> Page under Construction</strong>
+</div>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar top-bar"></span>
+          <span class="icon-bar middle-bar"></span>
+          <span class="icon-bar bottom-bar"></span> 
+        </button>
+        <a class="navbar-brand" href="#">Sonic Remake</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Box Run</a></li>
+          <li><a href="#">Nurf.gg</a></li> 
+          <li><a href="#">Sudoku</a></li> 
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-play"></span> Play Demo</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="jumbotron bgcover" style="background:none;">
+    <!-- <div class="row pull-left" style="left: 50px; !important background: red; !important">
+       <h1 class="clearfix pull-left text-left" id="title" style="width: 40%; left: 50px;">Sonic Remake</h1>
+     </div> -->
+
+     <video playsinline autoplay loop  id="bgvid"  >
+      <source src="../mov/sonic3.mov" type="video/mp4" class="theVid">
+
+      </video>
+      <div class="spacer"></div>
+
+      <div class="row center-block tech">
+        <div class="col-md-4 pull-left center-block" style="width: 33% !important"><img class="img-responsive" id="js" src="img/javascript.png" height="72" width="154" style="margin: auto !important;"></div>
+        <div class="col-md-4 pull-left"  style="width: 33% !important"><img class="img-responsive" id="ps" src="img/adobe-ps.png" style="margin: auto !important;"></div>
+        <div class="col-md-4 pull-left" style="width: 33% !important"><img class="img-responsive" id="un" src="img/unity.png" style="margin: auto !important;"></div>
+      </div>
+
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="menu">
+          <div class="sliding-middle-out overview active col-s-1 "><h3>Overview</h3></div>
+          <div class="sliding-middle-out method col-s-1 "><h3 onClick="document.getElementById('methodText').scrollIntoView();">Methodology</h3></div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="container">
+   <!--  <p> Sonic Remake was made using the Unity 3D engine. This game's goal just like all Sonic games is to 
+   reach the end of the stage in as little time as possible. </p>     -->      
+ </div>
+
+
+ <div class="overviewText">
+  <div class="row">
+
+    <div class="col-md-5" style="margin-left: 10px !important; line-height: 25px;" id="overviewInfo">
+      <p>Sonic Remake was made using the Unity 3D engine. This game's goal just like all Sonic games is to 
+        reach the end of the stage as fast as possible.</p>
+
+        <p>This game currently features 3 playable character: Sonic, Shadow, and tails, each having different stats and wielding their unique special move. </p>
+
+        <p>I started this game near the end of 2013 during my junior year of high school and plan on working on it again in the future.</p>
+      </div>
+
+      <div class="col-md-6 pull-right" id="theTable" style="top:-50px !important;">     
+        <table class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <th style="position: relative; right: 40px !important;"><img src="../img/sonic.png"></th>
+              <th style="position: relative; right: 40px !important;"><img src="../img/shadow.png"></th> 
+              <th style="position: relative; right: 40px !important;"><img src="../img/tails.png"></th>
+            </tr>
+            <tr>
+              <td><strong>Speed</strong></td>
+              <td>Moderate-Fast</td>
+              <td>Fast</td> 
+              <td>Moderate</td>
+            </tr>
+            <tr>
+              <td><strong>Acceleration</strong></td>
+              <td>Moderate-Fast</td>
+              <td>Moderate</td> 
+              <td>Fast</td>
+            </tr>
+            <tr>
+              <td><strong>Jump Height</strong></td>
+              <td>Moderate</td>
+              <td>Moderate</td> 
+              <td>High</td>
+            </tr>
+            <tr>
+              <td><strong>Special Jump</strong></td>
+              <td>Double Jump</td>
+              <td>Dash</td> 
+              <td>Fly</td>
+            </tr>
+            <tr>
+              <td><strong>Special Move</strong></td>
+              <td>Spin Bounce</td>
+              <td>Chaos Control</td> 
+              <td>Dummy Rings</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="methodText" style="margin-top: 20px;" id="methodText">
+    
+      <div class="row center-block" style="background: #333333; color: white">
+        <div class="container col-md-4 pull-left center-block text-center" style="width: 33% !important; margin: 0 auto !important;">
+          <img src="../img/tails.png" style="margin: 0 auto !important;" class="img-responsive">
+          <p>Creating the Sprites</p>
+        </div>
+       
+       <div class="container col-md-4 pull-left center-block text-center" style="width: 33% !important">
+         <img src="img/sonic/sonic-2.gif" style="margin: 0 auto !important;" class="img-responsive" width="75" height="75">
+        <p>Gameplay/Physics</p></div>
+        <div class="container col-md-4 pull-left center-block text-center" style="width: 33% !important">Level Design</div>
+
+    </div>
+    
+
+     <div class="row parallax" style="padding-top: 30px; color: black; margin-top: 20px; background: #FFFFFF">
+       <div class="col-md-6">
+          <div class="row" style="padding-left: 20px;">
+            <img src="img/sonic/sonic-run.png" width="300" height="90" class="img-fluid img-responsive col-md-9" style="float: left; margin-bottom: 10px;" alt="..." >
+            <img src="img/shadow-run.png" width="278" height="90" class="img-fluid img-responsive col-md-9" style="float: left; margin-bottom: 10px;" alt="..." >
+            <img src="img/tails-run.png" width="350" height="90" class="img-fluid img-responsive col-md-10" style="float: left; margin-bottom: 10px;" alt="..." >
+            
+
+          </div>
+          
+        </div>
+       <div class="col-md-5" style="margin-left: 10px !important; line-height: 25px;">
+      <h3>Setting up the Sprites</h3>
+      <p>I decided to use sprites to capture the original sonic. With photoshop, I was able to extract individual sprites from a sprite sheet. Then using Unity's built in Sprite editor, I was able to take the sprites and convert them into usable game objects. </p>
+
+      <p>I decided to use sprites to capture the original sonic. With photoshop, I was able to extract individual sprites from a sprite sheet. Then using Unity's built in Sprite editor, I was able to take the sprites and convert them into usable game objects. </p>
+      <br>
+       
+        
+    </div>
+    <div class="col-md-8" ></div>
+    <div class="col-md-5" style="margin-left: 10px !important; line-height: 25px;" >
+        <h3>Using Unity's State Machine</h3>
+      
+         <p>The next step was to take the individual sprites and link them together to create an animation. To do this I used Unity's Animator. This allowed me to set each sprite into a single frame</p>
+        </div>
+         <img src="img/statemachine.png"  class="img-fluid rounded img-responsive col-md-6 pull-right"  alt="..." style="padding-top: 40px;">
+    </div>
+    
+    <div class="row" >
+       <div class="col-md-5" style="margin-left: 10px !important; line-height: 25px;">
+      <h4>Gameplay/Physics</h4>
+      <p></p>
+    </div>
+      <!-- <img src="img/statemachine.png" height="450px" width="675px" class="img-fluid img-thumbnail rounded float-right" style="float: right;" alt="..." > -->
+    </div>
+
+  </div>
+
+ 
+
+  <!-- <img src="img/statemachine.png" height="300px" width="450px" style="border-radius: 2%; float:right;"> -->
+</body>
+</html>
+<!-- <em style="color: #00ffff">document</em>.addEventListener(<span style="color:e6e600;">'DOMContentLoaded'</span>, <em>function()</em>{ <br> //Hello World

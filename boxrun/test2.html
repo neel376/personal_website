@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nikhilesh Singh</title>
+  <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/test.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type = "text/javascript" 
+  src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/load.js"></script>
+  <script src="js/scale.js"></script>
+  <script src="js/template.js"></script>
+  
+  <script>
+
+  </script>
+
+</head>
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar top-bar"></span>
+          <span class="icon-bar middle-bar"></span>
+          <span class="icon-bar bottom-bar"></span> 
+        </button>
+        <a class="navbar-brand" href="#">Box Run</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Sonic Remake</a></li>
+          <li><a href="#">HairSwap</a></li>
+          <li><a href="#">Nurf.gg</a></li> 
+          <li><a href="#">Sudoku</a></li> 
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-play"></span> Play Demo</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="jumbotron bgcover" style="background:none;">
+    <!-- <div class="row pull-left" style="left: 50px; !important background: red; !important">
+       <h1 class="clearfix pull-left text-left" id="title" style="width: 40%; left: 50px;">Sonic Remake</h1>
+     </div> -->
+
+     <video playsinline autoplay loop  id="bgvid"  >
+      <source src="../mov/boxrun.mov" type="video/mp4" class="theVid">
+
+      </video>
+      <div class="spacer"></div>
+
+      <div class="row center-block tech">
+        <div class="col-md-4 pull-left center-block" style="width: 33% !important"><img class="img-responsive" id="js" src="img/javascript.png" height="72" width="154" style="margin: auto !important;"></div>
+        <div class="col-md-4 pull-left"  style="width: 33% !important"><img class="img-responsive" id="ps" src="img/adobe-ps.png" style="margin: auto !important;"></div>
+        <div class="col-md-4 pull-left" style="width: 33% !important"><img class="img-responsive" id="un" src="img/unity.png" style="margin: auto !important;"></div>
+      </div>
+
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="menu">
+          <div class="sliding-middle-out overview active col-s-1 "><h3>Overview</h3></div>
+          <div class="sliding-middle-out method col-s-1 "><h3 onClick="document.getElementById('methodText').scrollIntoView();">Methodology</h3></div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="container">
+   <!--  <p> Sonic Remake was made using the Unity 3D engine. This game's goal just like all Sonic games is to 
+   reach the end of the stage in as little time as possible. </p>     -->      
+ </div>
+
+
+ <div class="overviewText">
+  <div class="row">
+
+    <div class="col-md-5" style="margin-left: 10px !important; line-height: 25px;" id="overviewInfo">
+      <p>Sonic Remake was made using the Unity 3D engine. This game's goal just like all Sonic games is to 
+        reach the end of the stage in as little time as possible.</p>
+
+        <p>This game currently features 3 playable character, Sonic, Shadow, and tails, each having different stats and wielding their unique special move. </p>
+
+        <p>I started this game near the end of 2013 during my junior year of highschool and plan on continuing in the near future.</p>
+      </div>
+
+     
+    </div>
+  </div>
+
+  <div class="methodText" style="margin-top: 20px;" id="methodText">
+    
+      <div class="row center-block" style="background: #333333; color:white;">
+        <div class="container col-md-4 pull-left center-block text-center" style="width: 33% !important; margin: 0 auto !important;">
+          <img src="../img/tails.png" style="margin: 0 auto !important;" class="img-responsive">
+          <p> Creating the Sprites</p>
+        </div>
+       
+       <div class="container col-md-4 pull-left center-block text-center" style="width: 33% !important">
+         <img src="img/sonic/sonic-2.gif" style="margin: 0 auto !important;" class="img-responsive" width="75" height="75">
+        <p>Using the State Machine</p></div>
+        <div class="container col-md-4 pull-left center-block text-center" style="width: 33% !important">Gameplay</div>
+
+    </div>
+    
+    
+    
+
+  </div>
+
+  <div class="footer navbar-fixed-bottom"><button type="button" class="btn btn-info btn-lg btn-block" style="opacity: 1;">View on Github</button></div>
+
+  <!-- <img src="img/statemachine.png" height="300px" width="450px" style="border-radius: 2%; float:right;"> -->
+</body>
+</html>
+<!-- <em style="color: #00ffff">document</em>.addEventListener(<span style="color:e6e600;">'DOMContentLoaded'</span>, <em>function()</em>{ <br> //Hello World

@@ -1,0 +1,164 @@
+html{
+	background: white;
+}
+
+.profile-content{
+	display: block;
+	position: absolute;
+	left: 0;
+  	right: 0;
+	margin: 0 auto !important;
+	text-align: center;
+	top: 10%;
+	
+}
+.icons{
+	margin-top: 10px !important;
+}
+.icon{
+	margin-left: 30px;
+	color: white;
+	font-size: 18px;
+
+}
+h1, h3{
+	color: white !important;
+}
+h1{
+	font-size: 72px !important;
+}
+h3{
+	font-size: 30px !important;
+}
+img{
+	display: block;
+	margin: 0 auto;
+}
+.propic{
+	-webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+    box-shadow: 0px 0px 0px 7px #333333, 0px 0px 0px 15px #119333;
+}
+
+.background-video {
+  position: fixed;
+ /* right: 0; 
+  bottom: 0;*/
+  background-attachment: fixed;
+    background-position: center;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -100;
+  /**/
+}
+h1:after{
+	border-bottom: 3px solid white;
+    display: block;
+    content: '';
+    transform: scaleX(0);  
+    transition: transform 500ms ease-in-out;
+}
+h1.oi:after { 
+	transform: scaleX(1); 
+}
+h2{
+	position: relative;
+	text-align:center;
+	/*left: 43.5%;*/
+	top: -20px;
+	/*line-height: 275px;*/
+	/*top: -100px;*/
+	z-index: 3;
+	font-size: 36px;
+	z-index: 1;
+
+}
+
+hr{
+	position: relative;
+	/*background: black;*/
+	/*align: center;*/
+	width: 300px;
+	top: -105px;
+	left: 490px;
+}
+.board{
+	/*width: 100%;*/
+	height: 275px;
+	background-color: #333333;
+	color: white;
+
+}
+.board.final{
+	background-color: #333333;
+}
+
+.linked{
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	left: 42%;
+	top: 300px;
+	z-index: 3;
+	transform: scale(0);
+	-webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+   transition: all 0.4s ease-in-out;
+}
+.git{
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	left: 52%;
+	top: 300px;
+	z-index: 3;
+	border-radius: 100%;
+	transform: scale(0);
+	-webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+   transition: all 0.4s ease-in-out;
+}
+.scaleUp{
+	-ms-transform: scale(1.0, 1.0);
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0);
+}
+.type-wrap{
+	
+}
+button{
+	top: 100px;
+}
+.btn{
+	position: relative;
+	float: right;
+	width: 200px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	background: #B02A59;
+	text-decoration: none;
+	color: inherit;
+	font-size: 20px;
+	border-radius: 5px;
+}
+
+video#bgvid { 
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    width: 100%;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover; 
+    
+}

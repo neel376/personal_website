@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MobileApp">
+
+<head>
+	<title>CourseBuilder</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
+
+<!-- Angular Material Library -->
+<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/radio.css">
+<script src="js/datalist.polyfill.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover(); 
+});
+</script>
+</head>
+<body ng-controller="MainController">
+  <nav class="navbar navbar-standard navbar-default">
+    <div class="container-fluid oi">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only active" >Toggle navigation</span>
+          <span class="icon-bar top-bar"></span>
+          <span class="icon-bar middle-bar"></span>
+          <span class="icon-bar bottom-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Schedule<strong style="">Builder</strong></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li ><a href="#" style="color:white; text-shadow: none;"> <span class="glyphicon glyphicon-search"></span> Search courses <span class="sr-only">(current)</span></a></li>
+          <li style="background: #1b6365;"><a style="color:white; text-shadow: none;" href="#"><span class="glyphicon glyphicon-wrench"></span> Build a Schedule</a></li>
+
+        </ul>
+
+      </li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
+
+<div class="container-fluid col-md-6 vertical-center" ng-hide="showLoad">
+  <div class="panel panel-default " >
+   
+    <div class="panel-body clearfix ">     
+          <div class="loader"></div>
+          <p style="text-align:center;">Loading Nothing</p>
+  </div>
+</div>
+</div>
+
+<div class="container-fluid col-md-6 main" ng-hide="!showLoad">
+  <div class="panel panel-default" >
+    <div class="panel-heading">
+
+      <h3 class="form-control-static panel-title">Search Courses
+        <div class="col-xs-6 pull-right" style="position: relative; top: -5px; left: 10px;">
+          <select class="form-control input-sm"  >
+            <option>Spring 2017</option>
+            <option>Fall 2017</option>
+            <option>Spring 2016</option>
+            <option>Fall 2016</option>
+          </select>
+        </div>
+      </h3>
+
+
+    </div>
+    <form class="panel-body clearfix"  >
+     <label class="courseform" for="usr">Course by
+
+       <input id="radio1" type="radio" name="radio" value="name" ng-model="checked" style="width: 20px;"><label style="padding-left:20px;" for="radio1" ng-click="changeholder()"><span><span></span></span><oi style="font-size:12px;">Name</oi></label>
+       <label>
+        <input id="radio2" type="radio" name="radio" value="category" ng-model="checked" ><label style="padding-left:20px; left: 10px;" for="radio1"  ng-click="changeholder()"><span><span></span></span><oi style="font-size:12px;"></oi></label > <span style="position:relative;font-size:12px; right: 5px;">   Category</span></label>
+      </label>
+
+      <div class="coursesearch">
+       <input autocomplete="off" ng-show="checked == 'name'" name="courses" id="courses" type="search" placeholder="Course {{checked}}" ng-model="selected" typeahead="course as course.name for course in courses| filter:$viewValue | limitTo:8" class="form-control f" title="{{errmsg}}"  data-placement="top">
+       <label class="cleartext pull-right" ng-click="clear()">
+        <span ng-show="checked == 'name'" id="searchclear" class="glyphicon glyphicon-remove " ></span>
+      </label>
+
+      <input  autocomplete="off" style="position: relative; top: -5px;" ng-show="checked == 'category'" name="courses" id="cats" type="search" placeholder="Course {{checked}}" ng-model="selected" typeahead="cat as cat.name for cat in cats| filter:$viewValue | limitTo:8" class="form-control f" title="Enter Valid Category"  data-placement="top">
+      <label class="cleartext pull-right" ng-click="clear()">
+        <span ng-show="checked == 'category'" id="searchclear2" class="glyphicon glyphicon-remove" style="position: relative; top: -1px;"></span>
+      </label>
+    </div>
+
+
+    <input id="radio" type="radio" name="radio2" value="Required" ng-model="required"><label for="radio"><span><span></span></span><oi style="font-size:12px;">Required</oi></label>
+    <input id="radio" type="radio" name="radio2" value="Not Required" ng-model="required"><label for="radio" style="padding-left: 20px;"><span><span></span></span><oi style="font-size:12px;">Not Required</oi></label>
+    <div class="termform">
+      <label class="timeform" for="usr">Preffered Time:</label>
+      <select class="form-control input-sm" ng-init="preftime = 'Anytime'" ng-model="preftime">
+        <option >Anytime</option>
+        <option >Morning</option>
+        <option>Afternoon</option>
+        <option>Night</option>
+      </select>
+    </div>
+    <button type="submit" ng-click="addClass(selected, checked, required, preftime)" ng-model="selected" class="btn btn-standard pull-right adjust" ><span class="glyphicon glyphicon-plus"></span> Add</button>
+
+  </form>
+
+</div>
+<div class="panel panel-default" >
+  <div class="panel-heading">
+    <h2 class="panel-title">Course Cart</h2>
+
+  </div>
+  <div class="panel-body" style="">
+    <div class="panel panel-default" ng-repeat="x in coursecart track by $index">
+      <div>
+        <p class="panel-title" style="color: black;">      
+          {{x.name}} {{x.meta}}
+          <span class="glyphicon glyphicon-remove pull-right clearsingle" ng-click="removeCourse($index)"></span>
+        </p>
+        <i class="panel-title" style="color: black; font-size: 13px;">      
+          {{x.required}}    
+        </i>
+        <i class="panel-title" style="color: black; font-size: 13px; padding-left: 20px;">      
+         Preffered Time: {{x.time}}     
+        </i>
+        
+      </div>
+      <!--  <div class="panel-body" style="background: #EFEFEF;"></div> -->
+
+    </div>      
+  </div>
+
+
+  <div class="panel-footer clearfix ">
+   <button type="button" class="btn btn-red" ng-click="clearAll()"><span class="glyphicon glyphicon-minus"></span> Clear All</button>
+   <button type="button" class="btn btn-standard pull-right"><span class="glyphicon glyphicon-wrench"></span> Build Schedule</button>
+
+ </div>
+</div>
+</div>
+</body>
+<script src="js/maincontroller.js"></script>
+</html>
+

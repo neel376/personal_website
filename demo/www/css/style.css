@@ -1,0 +1,232 @@
+html,body{
+	height: 100%;
+	
+  	background: #3EC9CB;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+.main{
+	opacity: 1;
+	top: 0px;
+	transition: 2s ease-in-out all !important;
+}
+.main.ng-hide{
+  opacity: 0 !important;
+}
+.btn:focus,.btn:active, button:focus, button:active, .btn-standard:focus, .btn-standard:active{
+	color: white !important;
+	border-color: white !important;
+	outline: none !important;
+	
+}
+.btn:hover{
+	color: white !important;
+}
+.btn-standard{
+	background:#30b3b5;
+	color: white;
+}
+.btn-red{
+	background: #ff3333;
+	color: white;
+}
+.navbar-standard{
+	background: #258b8d;
+	border-color: #001133;
+}
+
+.navbar-header .navbar-brand{
+	color: white;
+	border:none; 
+	text-shadow: none;
+}
+.active{
+	background: #1b6365;
+}
+.adjust{
+	position: relative; 
+	margin-top: 5px;
+	top: 5px;
+
+}
+.panel{
+	border: 0;
+}
+
+.courseform .checkbox-inline{
+	left: 20px;
+	
+}
+.coursesearch{
+	position: relative; 
+	max-height: 30px; 
+	top: -7px;
+}
+.checkbox-inline > input{
+	background: green;
+}
+.reqbox{
+
+}
+.termform{
+	
+}
+.timeform{
+	font-size: 12px;
+	/*padding-top: 20px;*/
+}
+
+
+.example{
+  margin-bottom : 1.5em;
+}
+
+.cleartext{
+	position: relative;
+	top: -30px;
+	right: 5px;
+	width: 50px;
+	
+}
+.cleartext #searchclear, #searchclear2{
+	position: relative;
+	left: 15px;
+	top: 4px;
+	text-align: center;
+	font-size: 20px;
+	color: #F1F1F1; /*#258b8d*/
+}
+.clearable{
+	color: #3EC9CB !important;
+}
+.clearsingle{
+	color: #ff3333 !important;
+}
+
+/* Hamburger Animation   */
+.navbar, .navbar-nav, .navbar-collapse{
+	border: 0;
+}
+
+.navbar-header .navbar-toggle .icon-bar{
+	border: 0;
+	background: white;
+	
+}
+.navbar-toggle .icon-bar {
+    width: 22px;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+}
+.navbar-default .navbar-toggle {
+    position:relative;
+    border: 0;
+    z-index:100
+}
+.navbar-toggle .top-bar {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform-origin: 10% 10%;
+    -webkit-transform-origin: 10% 10%;
+}
+.navbar-toggle .middle-bar {
+    opacity: 0;
+}
+.navbar-toggle .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+    -webkit-transform: rotate(-45deg);
+    -webkit-transform-origin: 10% 90%;
+}
+
+
+.navbar-toggle.collapsed .top-bar {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+}
+.navbar-toggle.collapsed .middle-bar {
+    opacity: 1;
+}
+.navbar-toggle.collapsed .bottom-bar {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+}
+
+
+.datalist-polyfill {
+	list-style: none;
+	display: none;
+	background: white;
+	box-shadow: 0 2px 2px #999;
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 0;
+	padding: 0;
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+.datalist-polyfill:empty {
+	display: none !important;
+}
+
+.datalist-polyfill > li {
+    padding: 3px;
+    font: 13px "Lucida Grande", Sans-Serif;
+ }
+    
+.datalist-polyfill__active {
+    background: #3875d7;
+    color: white;
+ }
+
+/* Overwriting some bootstrap properties  */
+.navbar-default .navbar-header>button:focus {
+    background: transparent  !important;
+} 
+
+.navbar-default .navbar-header>button{
+	 background: transparent  !important;
+}
+
+.navbar-default .navbar-header .navbar-brand{
+	 color: white  !important;
+}
+.navbar-default .navbar-header{
+	 background: transparent;
+}
+.navbar-default .navbar-header {
+    border: 0;
+} 
+
+.panel-body li.active  a{
+    background: #258b8d;  
+}
+
+
+/*Loading Animation */
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #30b3b5; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    float: middle;
+    margin-left:auto;
+  	margin-right:auto;
+  	animation: spin 2s linear infinite;
+
+}
+.vertical-center {
+   top: 25%;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
